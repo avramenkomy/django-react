@@ -3,13 +3,51 @@
 
 # Getting Started
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Клонировать репозиторий:<br> 
+### `git clone git@github.com:avramenkomy/django-react.git`
+<br><br>
 
-## Available Scripts
+Перейти в папку проекта:<br>
+### `cd django-react/django_react`
+<br><br>
 
-In the project directory, you can run:
+Создать виртуальное окружение:<br>
+### `python3 -m venv venv`
+<br><br>
 
-### `yarn start`
+Активировать виртуальное окружение:<br>
+### `source venv/bin/activate` - для mac os/linux
+### `venv\scripts\activate.bat` - для windows
+<br><br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Установить зависимости:<br>
+### `pip3 install -r requirements.txt`
+<br><br>
+
+Создать и проверсти миграцию БД:<br>
+### `python3 manage.py makemigrations`
+### `python manage.py migrate`
+<br><br>
+
+Запустить сервер Django:<br>
+### `python3 manage.py runserver`
+<br><br>
+
+Создать записи в БД с помощью API django rest framework:<br>
+### `http://127.0.0.1:8000/api/lead/`
+#### поле name: `test user 1`
+#### поле email: `test1@example.com`
+#### поле message: `test message from user 1`
+Сделать POST запрос на сохранение записи
+#### поле name: `test user 2`
+#### поле email: `test2@example.com`
+#### поле message: `test message from user 2`
+Сделать POST запрос на сохранение записи
+<br><br>
+
+Запустить сервер React frontend:<br>
+### `cd frontend && npm run dev`
+<br><br>
+
+Перейти в браузер и главной странице увидеть результат:<br>
+### `http://127.0.0.1:8000/`
