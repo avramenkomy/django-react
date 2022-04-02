@@ -12,7 +12,8 @@
 <br><br>
 
 Создать виртуальное окружение:<br>
-### `python3 -m venv venv`
+### `python3 -m venv venv` - для mac os/linux
+### `python -m venv venv` - для windows
 <br><br>
 
 Активировать виртуальное окружение:<br>
@@ -20,17 +21,28 @@
 ### `venv\scripts\activate.bat` - для windows
 <br><br>
 
+Обновить версию pip (при необходимости):
+### `python -m pip install --upgrade pip`
+<br><br>
+
 Установить зависимости:<br>
+### `cd ..\`
 ### `pip3 install -r requirements.txt`
+### `cd django_react`
 <br><br>
 
 Создать и проверсти миграцию БД:<br>
+#### Для linux/mac os:
 ### `python3 manage.py makemigrations`
+### `python3 manage.py migrate`
+#### Для windows:
+### `python manage.py makemigrations`
 ### `python manage.py migrate`
 <br><br>
 
 Запустить сервер Django:<br>
-### `python3 manage.py runserver`
+### `python3 manage.py runserver` - для mac os/linux
+### `python manage.py runserver` - для windows
 <br><br>
 
 Создать записи в БД с помощью API django rest framework:<br>
@@ -45,8 +57,14 @@
 Сделать POST запрос на сохранение записи
 <br><br>
 
-Запустить сервер React frontend:<br>
-### `cd frontend && npm run dev`
+Открыть второй треминал и активировать виртуальное окружение:<br>
+### `cd django-react/django_react`
+### `source venv/bin/activate` - для mac os/linux
+### `venv\scripts\activate.bat` - для windows
+<br><br>
+
+Установить зависимости для frontend и запустить сервер React frontend из второго терминала:<br>
+### `cd frontend && npm install && npm run dev`
 <br><br>
 
 Перейти в браузер и главной странице увидеть результат:<br>
